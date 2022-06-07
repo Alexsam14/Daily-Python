@@ -1,0 +1,8 @@
+def find_short(s):
+    # your code here
+    temp = s.split(' ')
+    length_storage = []
+    for i in temp:
+        length_storage.append(len(i))
+    l = min(length_storage)  
+    return l # l: shortest word length
