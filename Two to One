@@ -1,0 +1,10 @@
+def longest(a1, a2):
+    # your code
+    str = []
+    for i in a1:
+        str.append(i)
+    for j in a2:
+        str.append(j)
+    str = list(set(str))
+    str = sorted(str)
+    return ''.join(str)
