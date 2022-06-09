@@ -1,0 +1,17 @@
+def duplicate_encode(word):
+    #your code here
+    count=0
+    placeholder = []
+    word = word.lower()
+    for i in word:
+        for j in word:
+            if j==i:
+                count+=1
+        if count==1:
+            i='('
+            placeholder.append(i)
+        else:
+            i = ')'
+            placeholder.append(i)
+        count=0    
+    return ''.join(placeholder)
