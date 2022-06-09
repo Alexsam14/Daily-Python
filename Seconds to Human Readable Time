@@ -1,0 +1,9 @@
+def make_readable(seconds):
+    # Do something
+    SS = seconds%60
+    TEMP = seconds//60
+    MM = TEMP%60
+    TEMP //= 60
+    HH = TEMP
+    
+    return f'{HH:02d}:{MM:02d}:{SS:02d}'
