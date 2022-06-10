@@ -1,0 +1,18 @@
+def duplicate_count(text):
+    text = text.lower()
+    letter_count = 0
+    records = []
+    count = []
+    for i in text:
+        for j in text:
+            if j==i:
+                letter_count+=1
+        records.append(i)        
+        if i in records:
+            break
+        if letter_count>1:
+            count.append(letter_count)
+
+    return len(count)
+
+print(duplicate_count('aabbcde')) 
