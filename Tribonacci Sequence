@@ -1,0 +1,13 @@
+def tribonacci(signature, n):
+    #your code here
+    fib = []
+    a = signature[0]
+    b = signature[1]
+    c = signature[2]
+    for i in range(n):
+        fib.append(a)
+        temp = a
+        a = b
+        b = c
+        c = a+b+temp
+    return fib 
