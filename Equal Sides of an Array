@@ -1,0 +1,18 @@
+def find_even_index(arr):
+    #your code here
+    l_sum = 0
+    r_sum = 0
+    record = []
+    for i in range(len(arr)):
+        for j in arr[:i]: 
+            l_sum += j
+        for k in arr[i+1:]:     
+            r_sum += k
+        if l_sum==r_sum:
+            record.append(i)
+        l_sum = 0
+        r_sum = 0    
+    if len(record)>0:
+        return min(record)
+    else:
+        return -1
