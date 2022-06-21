@@ -1,0 +1,12 @@
+def pig_it(text):
+    temp = []
+    #your code here
+    text = text.split()
+    for i in text:
+        if i.isalnum() == False:
+            temp.append(i)
+            continue
+        i = i[1:] + i[0] + 'ay'
+        temp.append(i)
+    temp = ' '.join(temp)
+    return temp
